@@ -1,0 +1,4 @@
+2025-12-18 16:22:38,853 - INFO - Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object') ---> (240, 4)
+2025-12-18 16:22:38,853 - INFO - Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object') ---> (61, 4)
+2025-12-18 16:22:39,788 - INFO - After transform (240, 4)
+2025-12-18 16:22:39,788 - INFO - After transform (61, 4)

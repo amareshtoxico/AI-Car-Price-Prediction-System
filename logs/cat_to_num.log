@@ -1,0 +1,43 @@
+2025-12-18 16:22:40,655 - INFO - Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - 
+Fuel_Type--->['Petrol' 'Diesel' 'CNG']
+2025-12-18 16:22:40,655 - INFO - 
+Seller_Type--->['Individual' 'Dealer']
+2025-12-18 16:22:40,655 - INFO - 
+Transmission--->['Manual' 'Automatic']
+2025-12-18 16:22:40,656 - INFO - 
+Brand--->['Bajaj' 'Hero' 'Etios' 'Royal Enfield' 'Fortuner' 'Ciaz' 'Hero Honda'
+ 'Ritz' 'Sx4' 'Jazz' 'Eon' 'Mahindra' 'Yamaha' 'Elantra' 'City' 'Brio'
+ 'I20' 'Innova' 'I10' 'Activa' 'Suzuki' 'Corolla' 'Ertiga' 'Alto' 'Grand'
+ '800' 'Amaze' 'Honda' 'Wagon' 'Land' 'Creta' 'Tvs' 'Ktm' 'Verna' 'Camry'
+ 'Swift' 'Dzire' 'Xcent' 'Omni' 'Baleno' 'Ignis' 'Hyosung']
+2025-12-18 16:22:40,667 - INFO - 
+     Fuel_Type  Seller_Type  Transmission     Brand
+184          0            0             0  2.389711
+132          0            0             0  2.389711
+194          0            0             0  3.396347
+75           0            1             0  4.566372
+111          0            0             0  3.630478
+..         ...          ...           ...       ...
+188          0            0             0  3.396347
+71           1            1             0  5.321559
+106          0            0             0  4.213937
+270          0            1             0  5.864711
+102          0            0             0  4.087147
+
+[240 rows x 4 columns]
+2025-12-18 16:22:40,671 - INFO - 
+     Fuel_Type  Seller_Type  Transmission     Brand
+177          0            0             1  3.339991
+289          0            1             0  5.864711
+228          1            1             0  5.028539
+198          0            0             0  2.389711
+60           0            1             0  5.321559
+..         ...          ...           ...       ...
+234          0            1             0  4.689835
+296          1            1             0  5.864711
+281          0            1             0  5.864711
+285          0            1             1  4.825148
+182          0            0             0  3.339991
+
+[61 rows x 4 columns]

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Prediction | ML Project</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="app-wrapper">
+
+    <header class="app-header">
+        <h1>🚗 Car Price Prediction</h1>
+        <p>AI-powered resale value estimator</p>
+    </header>
+
+    <main class="card">
+
+        <form method="POST" class="prediction-form">
+
+            <input type="number" name="Year" placeholder="Manufacturing Year" required>
+            <input type="number" step="0.01" name="Present_Price" placeholder="Present Price (₹ Lakhs)" required>
+            <input type="number" name="Kms_Driven" placeholder="Kilometers Driven" required>
+            <input type="number" name="Owner" placeholder="Number of Owners" required>
+
+            <select name="Fuel_Type" required>
+                <option value="">Fuel Type</option>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>CNG</option>
+            </select>
+
+            <select name="Seller_Type" required>
+                <option value="">Seller Type</option>
+                <option>Individual</option>
+                <option>Dealer</option>
+            </select>
+
+            <select name="Transmission" required>
+                <option value="">Transmission</option>
+                <option>Manual</option>
+                <option>Automatic</option>
+            </select>
+
+            <input type="text" name="Brand" placeholder="Car Brand (e.g. Hyundai)" required>
+
+            <!-- Auto Demo Button -->
+            <button type="button" class="btn-secondary" onclick="runDemo()">
+                🎥 Run Auto Demo
+            </button>
+
+            <!-- Predict Button -->
+            <button type="submit" class="btn-primary">
+                🔮 Predict Price
+            </button>
+        </form>
+
+        {% if prediction %}
+        <div class="result-card">
+            <h2>Estimated Resale Value</h2>
+            <p class="price">₹ {{ prediction }} Lakhs</p>
+
+            <div class="confidence">
+                <span>Model Confidence: {{ confidence }}%</span>
+                <div class="bar">
+                    <div class="fill" style="width: {{ confidence }}%"></div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+    </main>
+
+    <footer class="footer">
+        <p>Built with Python, Machine Learning & Flask</p>
+    </footer>
+
+</div>
+
+<script>
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomFloat(min, max, decimals = 1) {
+    return (Math.random() * (max - min) + min).toFixed(decimals);
+}
+
+function randomChoice(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function runDemo() {
+    // ----- Realistic Ranges -----
+    const years = randomInt(2012, 2023);
+    const price = randomFloat(3.5, 15.0);
+    const kms = randomInt(10000, 120000);
+    const owner = randomInt(0, 2);
+
+    const fuelTypes = ["Petrol", "Diesel", "CNG"];
+    const sellerTypes = ["Individual", "Dealer"];
+    const transmissions = ["Manual", "Automatic"];
+    const brands = [
+        "Hyundai", "Honda", "Maruti", "Tata",
+        "Toyota", "Kia", "Mahindra", "Ford"
+    ];
+
+    // ----- Fill Form -----
+    document.querySelector('[name="Year"]').value = years;
+    document.querySelector('[name="Present_Price"]').value = price;
+    document.querySelector('[name="Kms_Driven"]').value = kms;
+    document.querySelector('[name="Owner"]').value = owner;
+
+    document.querySelector('[name="Fuel_Type"]').value = randomChoice(fuelTypes);
+    document.querySelector('[name="Seller_Type"]').value = randomChoice(sellerTypes);
+    document.querySelector('[name="Transmission"]').value = randomChoice(transmissions);
+    document.querySelector('[name="Brand"]').value = randomChoice(brands);
+
+    // ----- Auto Submit with UX Delay -----
+    setTimeout(() => {
+        document.querySelector("form").submit();
+    }, 700);
+}
+</script>

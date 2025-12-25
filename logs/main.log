@@ -1,0 +1,235 @@
+2025-12-18 16:22:38,837 - INFO - shape of df:(301, 9)
+2025-12-18 16:22:38,837 - INFO - Index(['Car_Name', 'Year', 'Selling_Price', 'Present_Price', 'Kms_Driven',
+       'Fuel_Type', 'Seller_Type', 'Transmission', 'Owner'],
+      dtype='object')
+2025-12-18 16:22:38,838 - INFO - Car_Name         0
+Year             0
+Selling_Price    0
+Present_Price    0
+Kms_Driven       0
+Fuel_Type        0
+Seller_Type      0
+Transmission     0
+Owner            0
+dtype: int64
+2025-12-18 16:22:38,839 - INFO - shape of X:(301, 8)
+2025-12-18 16:22:38,839 - INFO - shape of y:(301,)
+2025-12-18 16:22:38,839 - INFO - Index(['Car_Name', 'Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type',
+       'Seller_Type', 'Transmission', 'Owner'],
+      dtype='object')
+2025-12-18 16:22:38,839 - INFO - Selling_Price
+2025-12-18 16:22:38,840 - INFO - shape of X_train:(240, 8)
+2025-12-18 16:22:38,840 - INFO - shape of X_test:(61, 8)
+2025-12-18 16:22:38,840 - INFO - shape of y_train:(240,)
+2025-12-18 16:22:38,840 - INFO - shape of y_test:(61,)
+2025-12-18 16:22:38,840 - INFO - columns of X_train:Index(['Car_Name', 'Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type',
+       'Seller_Type', 'Transmission', 'Owner'],
+      dtype='object')
+2025-12-18 16:22:38,840 - INFO - columns of X_test:Index(['Car_Name', 'Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type',
+       'Seller_Type', 'Transmission', 'Owner'],
+      dtype='object')
+2025-12-18 16:22:38,840 - INFO - columns of y_train:Selling_Price
+2025-12-18 16:22:38,840 - INFO - columns of y_test:Selling_Price
+2025-12-18 16:22:38,841 - INFO - There are no missing values in X_train and X_test
+2025-12-18 16:22:38,841 - INFO - Starting feature engineering (Brand extraction)
+2025-12-18 16:22:38,842 - INFO - Brand extraction completed
+2025-12-18 16:22:38,842 - INFO - X_train columns after feature engineering: Index(['Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type',
+       'Transmission', 'Owner', 'Brand'],
+      dtype='object')
+2025-12-18 16:22:38,842 - INFO - X_test columns after feature engineering: Index(['Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type',
+       'Transmission', 'Owner', 'Brand'],
+      dtype='object')
+2025-12-18 16:22:38,847 - INFO - 
+     Year  Present_Price  Kms_Driven Fuel_Type Seller_Type Transmission  Owner          Brand
+184  2008          0.750       26000    Petrol  Individual       Manual      1          Bajaj
+132  2017          0.950        3500    Petrol  Individual       Manual      0          Bajaj
+194  2008          0.787       50000    Petrol  Individual       Manual      0           Hero
+75   2015          6.800       36000    Petrol      Dealer       Manual      0          Etios
+111  2016          1.500        8700    Petrol  Individual       Manual      0  Royal Enfield
+59   2014         35.960       41000    Diesel      Dealer    Automatic      0       Fortuner
+93   2015         30.610       40000    Diesel      Dealer    Automatic      0       Fortuner
+6    2015          8.120       18796    Petrol      Dealer       Manual      0           Ciaz
+175  2011          0.787       75000    Petrol  Individual       Manual      0     Hero Honda
+30   2012          5.980       51439    Diesel      Dealer       Manual      0           Ritz
+2025-12-18 16:22:38,852 - INFO - 
+     Year  Present_Price  Kms_Driven Fuel_Type Seller_Type Transmission  Owner    Brand
+177  2016           0.57       24000    Petrol  Individual    Automatic      0    Honda
+289  2016          13.60       10980    Petrol      Dealer       Manual      0     City
+228  2012           9.40       60000    Diesel      Dealer       Manual      0    Verna
+198  2011           0.57       35000    Petrol  Individual       Manual      1    Bajaj
+60   2013          18.61       40001    Petrol      Dealer       Manual      0  Corolla
+..    ...            ...         ...       ...         ...          ...    ...      ...
+234  2015           5.70        4492    Petrol      Dealer       Manual      0    Grand
+296  2016          11.60       33988    Diesel      Dealer       Manual      0     City
+281  2006           7.60       50456    Petrol      Dealer       Manual      0     City
+285  2016           8.50       15059    Petrol      Dealer    Automatic      0     Jazz
+182  2013           0.58       30000    Petrol  Individual       Manual      0    Honda
+
+[61 rows x 8 columns]
+2025-12-18 16:22:38,852 - INFO - columns of X_train:Index(['Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type',
+       'Transmission', 'Owner', 'Brand'],
+      dtype='object')
+2025-12-18 16:22:38,852 - INFO - columns of X_test:Index(['Year', 'Present_Price', 'Kms_Driven', 'Fuel_Type', 'Seller_Type',
+       'Transmission', 'Owner', 'Brand'],
+      dtype='object')
+2025-12-18 16:22:38,853 - INFO - columns of X_train_num:Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object')
+2025-12-18 16:22:38,853 - INFO - columns of X_train_cat:Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:38,853 - INFO - columns of X_test_num:Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object')
+2025-12-18 16:22:38,853 - INFO - columns of X_test_cat:Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,654 - INFO - ===========================================================
+2025-12-18 16:22:40,654 - INFO - columns of X_train_num:Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - columns of X_train_cat:Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - columns of X_test_num:Index(['Year', 'Present_Price', 'Kms_Driven', 'Owner'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - columns of X_test_cat:Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,655 - INFO - Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,672 - INFO - Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,672 - INFO - Index(['Fuel_Type', 'Seller_Type', 'Transmission', 'Brand'], dtype='object')
+2025-12-18 16:22:40,672 - INFO - (240, 4)
+2025-12-18 16:22:40,672 - INFO - (61, 4)
+2025-12-18 16:22:40,672 - INFO - Fuel_Type       0
+Seller_Type     0
+Transmission    0
+Brand           0
+dtype: int64
+2025-12-18 16:22:40,673 - INFO - Fuel_Type       0
+Seller_Type     0
+Transmission    0
+Brand           0
+dtype: int64
+2025-12-18 16:22:40,678 - INFO - Before 
+:     Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+184    17       0.559616   10.165890      1          0            0             0  2.389711
+132     8       0.667829    8.160804      0          0            0             0  2.389711
+194    17       0.580538   10.819798      0          0            0             0  3.396347
+75     10       2.054124   10.491302      0          0            1             0  4.566372
+111     9       0.916291    9.071193      0          0            0             0  3.630478
+..    ...            ...         ...    ...        ...          ...           ...       ...
+188    12       0.451076    9.798183      0          0            0             0  3.396347
+71     14       2.601207   10.714440      0          1            1             0  5.321559
+106    11       1.492904    9.711176      1          0            0             0  4.213937
+270    14       2.397895   11.146806      0          0            1             0  5.864711
+102     8       1.022451    8.294300      0          0            0             0  4.087147
+
+[240 rows x 8 columns]
+2025-12-18 16:22:40,683 - INFO - Before 
+:     Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+177     9       0.451076   10.085851      0          0            0             1  3.339991
+289     9       2.681022    9.303922      0          0            1             0  5.864711
+228    13       2.341806   11.002117      0          1            1             0  5.028539
+198    14       0.451076   10.463132      1          0            0             0  2.389711
+60     12       2.976040   10.596685      0          0            1             0  5.321559
+..    ...            ...         ...    ...        ...          ...           ...       ...
+234    10       1.902108    8.410276      0          0            1             0  4.689835
+296     9       2.533697   10.433792      0          1            1             0  5.864711
+281    19       2.151762   10.828877      0          0            1             0  5.864711
+285     9       2.251292    9.619798      0          0            1             1  4.825148
+182    12       0.457425   10.308986      0          0            0             0  3.339991
+
+[61 rows x 8 columns]
+2025-12-18 16:22:40,700 - INFO - After 
+:         Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+184  1.969861      -1.338078    0.051109      1          0            0             0 -1.704157
+132 -1.156443      -1.216076   -1.973998      0          0            0             0 -1.704157
+194  1.969861      -1.314490    0.711546      0          0            0             0 -0.911826
+75  -0.461709       0.346859    0.379770      0          0            1             0  0.009110
+111 -0.809076      -0.935956   -1.054519      0          0            0             0 -0.727540
+..        ...            ...         ...    ...        ...          ...           ...       ...
+188  0.233025      -1.460449   -0.320270      0          0            0             0 -0.911826
+71   0.927760       0.963652    0.605136      0          1            1             0  0.603524
+106 -0.114342      -0.285871   -0.408146      1          0            0             0 -0.268295
+270  0.927760       0.734434    1.041819      0          0            1             0  1.031043
+102 -1.156443      -0.816269   -1.839169      0          0            0             0 -0.368092
+
+[240 rows x 8 columns]
+2025-12-18 16:22:40,705 - INFO - After 
+:         Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+177 -0.809076      -1.460449   -0.029730      0          0            0             1 -0.956185
+289 -0.809076       1.053636   -0.819466      0          0            1             0  1.031043
+228  0.580393       0.671198    0.895684      0          1            1             0  0.372885
+198  0.927760      -1.460449    0.351318      1          0            0             0 -1.704157
+60   0.233025       1.386246    0.486205      0          0            1             0  0.603524
+..        ...            ...         ...    ...        ...          ...           ...       ...
+234 -0.461709       0.175473   -1.722035      0          0            1             0  0.106289
+296 -0.809076       0.887540    0.321686      0          1            1             0  1.031043
+281  2.664595       0.456939    0.720715      0          0            1             0  1.031043
+285 -0.809076       0.569151   -0.500437      0          0            1             1  0.212795
+182  0.233025      -1.453290    0.195633      0          0            0             0 -0.956185
+
+[61 rows x 8 columns]
+2025-12-18 16:22:40,705 - INFO - ================================================
+2025-12-18 16:22:40,706 - INFO - Year             0
+Present_Price    0
+Kms_Driven       0
+Owner            0
+Fuel_Type        0
+Seller_Type      0
+Transmission     0
+Brand            0
+dtype: int64
+2025-12-18 16:22:40,706 - INFO - Year             0
+Present_Price    0
+Kms_Driven       0
+Owner            0
+Fuel_Type        0
+Seller_Type      0
+Transmission     0
+Brand            0
+dtype: int64
+2025-12-18 16:22:40,707 - INFO - ========================================================
+2025-12-18 16:22:40,711 - INFO - 
+         Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+184  1.969861      -1.338078    0.051109      1          0            0             0 -1.704157
+132 -1.156443      -1.216076   -1.973998      0          0            0             0 -1.704157
+194  1.969861      -1.314490    0.711546      0          0            0             0 -0.911826
+75  -0.461709       0.346859    0.379770      0          0            1             0  0.009110
+111 -0.809076      -0.935956   -1.054519      0          0            0             0 -0.727540
+..        ...            ...         ...    ...        ...          ...           ...       ...
+188  0.233025      -1.460449   -0.320270      0          0            0             0 -0.911826
+71   0.927760       0.963652    0.605136      0          1            1             0  0.603524
+106 -0.114342      -0.285871   -0.408146      1          0            0             0 -0.268295
+270  0.927760       0.734434    1.041819      0          0            1             0  1.031043
+102 -1.156443      -0.816269   -1.839169      0          0            0             0 -0.368092
+
+[240 rows x 8 columns]
+2025-12-18 16:22:40,716 - INFO - 
+         Year  Present_Price  Kms_Driven  Owner  Fuel_Type  Seller_Type  Transmission     Brand
+177 -0.809076      -1.460449   -0.029730      0          0            0             1 -0.956185
+289 -0.809076       1.053636   -0.819466      0          0            1             0  1.031043
+228  0.580393       0.671198    0.895684      0          1            1             0  0.372885
+198  0.927760      -1.460449    0.351318      1          0            0             0 -1.704157
+60   0.233025       1.386246    0.486205      0          0            1             0  0.603524
+..        ...            ...         ...    ...        ...          ...           ...       ...
+234 -0.461709       0.175473   -1.722035      0          0            1             0  0.106289
+296 -0.809076       0.887540    0.321686      0          1            1             0  1.031043
+281  2.664595       0.456939    0.720715      0          0            1             0  1.031043
+285 -0.809076       0.569151   -0.500437      0          0            1             1  0.212795
+182  0.233025      -1.453290    0.195633      0          0            0             0 -0.956185
+
+[61 rows x 8 columns]
+2025-12-18 16:22:40,717 - INFO - 
+184    0.25
+132    0.75
+194    0.20
+75     3.95
+111    1.15
+       ... 
+188    0.25
+71     4.50
+106    1.35
+270    4.10
+102    1.65
+Name: Selling_Price, Length: 240, dtype: float64
+2025-12-18 16:22:40,717 - INFO - 
+177     0.35
+289    10.11
+228     4.95
+198     0.15
+60      6.95
+       ...  
+234     5.50
+296     9.50
+281     2.10
+285     7.40
+182     0.30
+Name: Selling_Price, Length: 61, dtype: float64

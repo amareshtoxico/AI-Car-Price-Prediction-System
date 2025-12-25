@@ -1,0 +1,115 @@
+:root {
+    --bg-dark: #0e1117;
+    --card-dark: #161b22;
+    --accent: #4cc9f0;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+    --success: #2ea043;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #1b1f2a, #0e1117);
+    color: var(--text-main);
+}
+
+.app-wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: var(--card-dark);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.prediction-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 10px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    color: var(--text-main);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.btn-primary {
+    grid-column: 1 / -1;
+    padding: 14px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4cc9f0, #4361ee);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    grid-column: 1 / -1;
+    padding: 12px;
+    background: transparent;
+    border: 1px dashed var(--accent);
+    color: var(--accent);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.result-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.price {
+    font-size: 2rem;
+    color: var(--success);
+}
+
+.bar {
+    height: 8px;
+    background: #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2ea043, #4cc9f0);
+    animation: grow 1s ease-in-out;
+}
+
+@keyframes grow {
+    from { width: 0; }
+}
+
+.footer {
+    margin-top: 25px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
