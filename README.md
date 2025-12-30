@@ -1,5 +1,6 @@
 
 # 🚗 AI Car Price Prediction System
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20App-success?style=for-the-badge&logo=render)](https://ai-car-price-prediction-system.onrender.com)
 
 An end-to-end machine learning web application that predicts the resale price of used cars based on historical data and market-driven features. The system combines a robust ML pipeline with a production-grade Flask backend and an enterprise-style UI designed for real-world usability and interviews.
 
